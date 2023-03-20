@@ -1,5 +1,3 @@
-// export const getContacts = store => store.contacts;
-
 export const getFilteredContacts = ({ contacts: { items }, filter }) => {
   if (!filter) {
     return items;
@@ -16,3 +14,6 @@ export const getFilteredContacts = ({ contacts: { items }, filter }) => {
   console.log(result);
   return result;
 };
+
+export const isLoading = ({ contacts }) => contacts.loading;
+export const isError = ({ contacts }) => contacts.error;

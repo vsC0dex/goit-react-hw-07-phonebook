@@ -9,8 +9,9 @@ const PhonebookFilter = () => {
   const dispatch = useDispatch();
 
   const handleFilter = e => {
-    const action = setFilter(e.target.value);
-    dispatch(action);
+    // const action = setFilter(e.target.value);
+    // dispatch(action);
+    dispatch(setFilter(e.currentTarget.value));
   };
 
   return (

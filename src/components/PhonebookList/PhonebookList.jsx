@@ -6,16 +6,19 @@ import {
   fetchContacts,
   fetchDeleteContact,
 } from 'redux/contacts/contacts-operations';
+import { getFilteredContacts } from 'redux/contacts/contacts-selectors';
 // import { deleteContact } from 'redux/contacts/contacts-slice';
 
 import styles from './phonebook-list.module.css';
+
+// import { getFilter } from 'redux/filter/filter-selectors';
 
 const PhonebookList = () => {
   // const contacts = useSelector(store => store.contacts);
   // const filter = useSelector(store => store.filter);
 
-  const contacts = useSelector(store => store.contacts.items);
-  // const visibleContacts = useSelector(getFilterContacts);
+  // const contacts = useSelector(store => store.contacts.items);
+  const contacts = useSelector(getFilteredContacts);
 
   const dispatch = useDispatch();
 
